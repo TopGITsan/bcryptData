@@ -1,8 +1,11 @@
 'use strict';
-const express     = require('express');
-const bodyParser  = require('body-parser');
-const fccTesting  = require('./freeCodeCamp/fcctesting.js');
-const app         = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+
+const fccTesting = require('./freeCodeCamp/fcctesting.js');
+
+const app = express();
 
 fccTesting(app); //For FCC testing purposes
 
@@ -24,4 +27,4 @@ const someOtherPlaintextPassword = 'pass123';
 //END_SYNC
 
 
-app.listen(process.env.PORT || 3000, () => {});
+app.listen(process.env.PORT || 3000, () => { });
